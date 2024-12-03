@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourStory</title>
+    <link rel="icon" type="png/x-icon" href="pen.png">
+</head>
+<body>
+    <style>
+        /* General reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("letter.jpg");
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Box structure */
+        .box {
+            display: flex;
+            flex-direction: row;
+            width: 600px;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: rgb(59, 34, 2);
+        }
+
+        /* Image section (left side) */
+        .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(59, 34, 2);
+        }
+        .image-section img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .input-group {
+            position: relative;
+            width: 300px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            outline: none;
+            box-sizing: border-box;
+            background-color: bisque;
+        }
+
+        .input-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            color: rgb(59, 34, 2);
+            transition: 0.3s ease all;
+            pointer-events: none;
+        }
+
+        .input-group input:focus + label,
+        .input-group input:not(:placeholder-shown) + label {
+            top: -15px;
+            left: 8px;
+            font-size: 13px;
+            color: white;
+            padding: 0 0;
+        }
+
+        .input-group input:focus {
+            border-color: rgb(59, 34, 2);
+        }
+        /* Form section (right side) */
+        .form-section {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: bisque;
+        }
+        .btn {
+            background-color: bisque;
+            color: black;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            width: 80%;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: rgb(252, 192, 118);
+        }
+        #col {
+            color: bisque;
+        }
+
+    </style>
+    <div class="container">
+        <div class="box">
+            <!-- Left side with the image -->
+            <div class="image-section">
+                <img src="pen.png" alt="Placeholder Image">
+            </div>
+
+            <!-- Right side with input form -->
+            <div class="form-section">
+                <h2>Sign up</h2>
+                <form>
+                    <div class="input-group">
+                        <input type="text" id="email" name="email" placeholder=" " required>
+                        <label for="email">Email or Phone</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="password" id="pass" name="pass" placeholder=" " required>
+                        <label for="pass">Password</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="password" id="pass" name="pass" placeholder=" " required>
+                        <label for="pass">Re-enter Password</label>
+                    </div>
+                    <br>
+                    <div class="input-group">
+                        <input type="text" id="otp" name="otp" placeholder=" " required>
+                        <label for="otp">OTP</label>
+                    </div>
+                    <br>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
